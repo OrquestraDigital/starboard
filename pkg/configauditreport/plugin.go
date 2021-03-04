@@ -28,4 +28,6 @@ type Plugin interface {
 	// GetContainerName returns the name of the container in a pod created by a scan job
 	// to read logs from.
 	GetContainerName() string
+
+	GetConfigHash(ctx starboard.PluginContext) (string, error)
 }
